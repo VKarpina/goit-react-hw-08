@@ -1,0 +1,48 @@
+:root {
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 400;
+  --black: rgb(29, 28, 28);
+  --white: white;
+  --grey: rgb(138, 136, 136);
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: var(--black);
+  background-color: var(--white);
+  padding: 20px;
+}
+
+ul,
+ol,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  color: currentColor;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}

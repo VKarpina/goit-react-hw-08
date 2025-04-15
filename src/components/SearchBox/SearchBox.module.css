@@ -1,0 +1,16 @@
+.search {
+  margin-bottom: 30px;
+}
+
+.text {
+  font-weight: 700;
+}
+
+.input {
+  box-shadow: 1px 1px 1px 1px grey;
+  border: 1px solid black;
+  width: 300px;
+  border-radius: 8px;
+  outline: 0;
+  padding: 8px 15px;
+}
