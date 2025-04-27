@@ -1,0 +1,13 @@
+.form {
+  width: 320px;
+}
+
+.label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+}
+
+.error {
+  color: rgb(177, 17, 17);
+}

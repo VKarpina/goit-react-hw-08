@@ -2,10 +2,9 @@ import { useDispatch } from "react-redux";
 import styles from "./ContactForm.module.css";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
-import { addContact } from "../../redux/contactsOps";
-// import { addContact } from "../../redux/contactsSlice";
+import { addContact } from "../../redux/contacts/operations";
 
-const onlyNumber = /^[0-9\s-]+$/;
+const phoneNumberRegex = /^[+]?[\d\s-()]+$/;
 const onlyLetters = /^[A-Za-zA-Яа-яЄєІіЇїҐґ\s]+$/;
 
 const contactSchema = Yup.object().shape({
@@ -15,8 +14,9 @@ const contactSchema = Yup.object().shape({
     .matches(onlyLetters, "Only letters allowed!")
     .required("Required"),
   number: Yup.string()
-    .matches(onlyNumber, "This is not a number!")
-    .min(3, "Too Short!")
+    .trim()
+    .matches(phoneNumberRegex, "This is not a number!")
+    .min(1, "Too Short!")
     .max(50, "Too Long!")
     .required("Required"),
 });
